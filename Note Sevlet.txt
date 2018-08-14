@@ -1,0 +1,36 @@
+ok 1. Pre: 
+Ok	DB.
+ok	Forder 
+ 
+2. Xuat list 
+
+3. Lam login:
+ok	1. Thiet ke nhanh man hinh log in
+ok 	2. Login sang book_list
+Ok	3. Thiet ke jsp lai man hinh bookList
+OK. Thiet ke lai man hinh html css
+OK. Them cac thuoc tinh name	
+------------------------------------------------------
+1. Kiem tra truong hop nhap sai pass va Id co bao loi khong.
+	Neu co. Nguyen nhan trong file LoginDao. (trong catch. return null;) 
+
+2. Dem theo thuoc tinh name. 
+ooo		LoginDao: them bookUser.setUSERNAME de Object bookUser mang chua thuoc tinh name tuong ung.
+ooo		SetAttribute o trang loginServlet.sau else. (request.setAttribute("bookUserName", bookUser);)
+ooo		Get o trang list jsp. Xoa ten tanaka. Thay bang get.Attribute (request.getAttribute("bookUserName");
+			PA 2: Dung getParameter lay String thay vi lay Object. (khong dung dc. Vi lay thong tin nguoi nhap hien thi ra man hinh)
+	4. Trong truong hop loi
+		Hien thi thong bao
+		Chuyen toi trang login
+	PA: Dung if trong jsp index
+		Trong loginServlet. request.setAttribute("errorMessage", "Invalid user or password");
+		JspIndex:<h2><%=request.getAttribute("errorMessage") %></h2>
+
+ 	
+	6. Lam thuoc tinh tim theo ten. Timf theo dau sach. FInd.
+	- FileDAO. "SELECT * FROM book WHERE book_name=?"
+			preparedStatement.setString(1, bookName);
+			catch{ return null}
+			return bookList;
+	-File Servlet:
+	-File JSP Sau khi tim.
