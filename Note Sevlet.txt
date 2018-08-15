@@ -13,8 +13,29 @@ OK. Them cac thuoc tinh name
 ------------------------------------------------------
 1. Kiem tra truong hop nhap sai pass va Id co bao loi khong.
 	Neu co. Nguyen nhan trong file LoginDao. (trong catch. return null;) 
+2. Lam thuoc tinh tim theo ten. Timf theo dau sach. FInd.
+	- FileDAO. "SELECT * FROM book WHERE book_name=?"
+			preparedStatement.setString(1, bookName);
+			{//get Object findByBookList
+				while (resultSet.next()) {
 
-2. Dem theo thuoc tinh name. 
+				BookBean book = new BookBean();
+				book.setBookId(resultSet.getString("book_id"));
+				book.setBookName(resultSet.getString("book_name"));
+				book.setAuthor(resultSet.getString("author"));
+				book.setPublicationDate(resultSet.getString("publication_date"));
+				book.setStock(resultSet.getString("stock"));
+				book.setGenre_id(resultSet.getString("genre_id"));
+
+				findByBookList.add(book);
+			}}
+
+			catch{ return null}
+			return bookList;
+	-File Servlet:
+	-File JSP Sau khi tim.
+
+3. Dem theo thuoc tinh name. 
 ooo		LoginDao: them bookUser.setUSERNAME de Object bookUser mang chua thuoc tinh name tuong ung.
 ooo		SetAttribute o trang loginServlet.sau else. (request.setAttribute("bookUserName", bookUser);)
 ooo		Get o trang list jsp. Xoa ten tanaka. Thay bang get.Attribute (request.getAttribute("bookUserName");
@@ -27,10 +48,4 @@ ooo		Get o trang list jsp. Xoa ten tanaka. Thay bang get.Attribute (request.getA
 		JspIndex:<h2><%=request.getAttribute("errorMessage") %></h2>
 
  	
-	6. Lam thuoc tinh tim theo ten. Timf theo dau sach. FInd.
-	- FileDAO. "SELECT * FROM book WHERE book_name=?"
-			preparedStatement.setString(1, bookName);
-			catch{ return null}
-			return bookList;
-	-File Servlet:
-	-File JSP Sau khi tim.
+	
