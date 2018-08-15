@@ -13,7 +13,9 @@ OK. Them cac thuoc tinh name
 ------------------------------------------------------
 1. Kiem tra truong hop nhap sai pass va Id co bao loi khong.
 	Neu co. Nguyen nhan trong file LoginDao. (trong catch. return null;) 
-2. Lam thuoc tinh tim theo ten. Timf theo dau sach. FInd.
+	-PA 2: trong catch. return null; cuoi method de return bookList (xoa return booklist trong if)
+
+2. Lam thuoc tinh tim theo ten. Tim theo dau sach. FInd.
 	- FileDAO. "SELECT * FROM book WHERE book_name=?"
 			preparedStatement.setString(1, bookName);
 			{//get Object findByBookList
@@ -34,13 +36,18 @@ OK. Them cac thuoc tinh name
 			return bookList;
 	-File Servlet:
 	-File JSP Sau khi tim.
+2.2 Tim theo genre-id
+	Gop 2 bang truoc khi tim. Tranh loi phat sinh sau nay.
+	-Kiem tra getParameter lay gia tri gi sau khi an kensaku.
+	-Suy nghi giai quyet dua vao gia tri getParameter do.
+		
 
 3. Dem theo thuoc tinh name. 
-ooo		LoginDao: them bookUser.setUSERNAME de Object bookUser mang chua thuoc tinh name tuong ung.
-ooo		SetAttribute o trang loginServlet.sau else. (request.setAttribute("bookUserName", bookUser);)
-ooo		Get o trang list jsp. Xoa ten tanaka. Thay bang get.Attribute (request.getAttribute("bookUserName");
+		LoginDao: them bookUser.setUSERNAME de Object bookUser mang chua thuoc tinh name tuong ung.
+		SetAttribute o trang loginServlet.sau else. (request.setAttribute("bookUserName", bookUser);)
+		Get o trang list jsp. Xoa ten tanaka. Thay bang get.Attribute (request.getAttribute("bookUserName");
 			PA 2: Dung getParameter lay String thay vi lay Object. (khong dung dc. Vi lay thong tin nguoi nhap hien thi ra man hinh)
-	4. Trong truong hop loi
+4. Trong truong hop loi
 		Hien thi thong bao
 		Chuyen toi trang login
 	PA: Dung if trong jsp index

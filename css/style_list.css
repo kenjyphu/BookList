@@ -1,0 +1,150 @@
+@CHARSET "UTF-8";
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	height: 60px;
+	width: 100%;
+	background-color: #437DD4;
+	margin-top: 0px;
+}
+
+#header{
+	margin: 0px auto;
+	color: white;
+}
+
+footer {
+	height: 30px;
+	width: 100%;
+	background-color: #437DD4;
+	clear: both;
+}
+#footer{
+  color: white;
+	width:1000px;
+	margin: 0px auto;
+}
+
+#container{
+  width: 100%;
+	margin: 0px auto;
+}
+
+#header .site_title {
+	padding: 0px 0px 10px 0px;
+    font-size: 35px;
+    float: left;
+}
+
+#header .user_info {
+  margin-right:100px;
+	line-height: 45px;
+	text-align: right;
+	padding-top: 10px;
+}
+
+#header span{
+  padding-right:100px;
+}
+
+div#footer {
+	text-align: center;
+	font-size: 8pt;
+	line-height: 30px;
+}
+
+#sub{
+	clear:left;
+  width:1000px;
+  margin: 40px auto;
+}
+
+#sub .find-bookName{
+  float:left;
+  width:300px;
+  margin-left:128px;
+}
+
+#sub .find-genreName{
+  text-align:right;
+  margin-right:128px;
+}
+
+#sub .find-bookName .title{
+  float:left;
+}
+
+#sub .find-genreName .title{
+  float:left;
+  margin-left:140px;
+}
+
+#sub input[type=text] {
+	width: 100px;
+}
+
+ input[type=submit] {
+	width: 100px;
+	box-shadow: none;
+}
+
+input[type=submit]:hover{
+	background-color: #5CCCCC;
+}
+
+#sub select{
+	width: 100px;
+}
+
+h3 {
+	padding-left: 15px;
+	padding-top: 20px;
+}
+
+table {
+	background-color: #FFFFFF;
+	border-color: black;
+	border-collapse: collapse;
+	margin:20px auto;
+}
+
+table td, table th {
+	border-width: 1px;
+	border-style: solid;
+	padding: 2px 0px 2px 5px;
+}
+
+td.data {
+	width: 60px;
+}
+
+th.empId {
+	width: 60px;
+}
+
+th.empName {
+	width: 80px;
+}
+
+th.gender {
+	width: 50px;
+}
+
+th.address {
+	width: 80px;
+}
+
+th.birthday {
+	width: 100px;
+}
+
+th.authority {
+	width: 60px;
+}
+
+th.deptName {
+	width: 60px;
+}

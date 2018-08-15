@@ -1,0 +1,71 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	height: 60px;
+	width: 100%;
+	background-color: #437DD4;
+}
+
+div#header {
+	padding: 5px 10px 10px 30px;
+	font-size: 35px;
+	color: white;
+}
+
+footer {
+	color: white;
+	height: 30px;
+	width: 100%;
+	background-color: #437DD4;
+	clear: both;
+}
+
+div#footer {
+	text-align: center;
+	font-size: 8pt;
+	line-height: 30px;
+}
+
+#container {
+	height: 300px;
+}
+
+div.form {
+	width: 720px;
+	margin: 0px auto;
+}
+
+div.login_label {
+	float: left;
+	width: 305px;
+	height: 35px;
+	padding-right: 5px;
+	text-align: right;
+	font-weight: bold;
+}
+
+div.login_input {
+	float: left;
+	width: 410px;
+	height: 35px;
+	text-align: left;
+}
+
+input[type=submit]:hover {
+	background-color: #5CCCCC;
+}
+
+h3 {
+	padding-left: 50px;
+	padding-top: 20px;
+}
+
+p {
+	text-align: center;
+	padding-right: 40px;
+}
